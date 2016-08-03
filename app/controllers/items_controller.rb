@@ -13,6 +13,10 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @have_users = @item.have_users
+    @want_users = @item.want_users
+    @title = "#{@item.title} - monolist"
+    @description = "#{@item.title}に関する情報です。この商品を欲しい人、持ってる人を表示しています。"
   end
 
   private
